@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vela Lucrativa — Personalize velas e venda o ano inteiro</title>
+<meta name="description" content="Aprenda a personalizar velas prontas com artes impressas e venda como lembrancinhas, presentes e encomendas. Mais de 200 artes incluídas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#5a1a26;
+  --wine-dark:#3d0f19;
+  --gold:#a8782f;
+  --gold-soft:#e9d9b8;
+  --cream:#faf5ec;
+  --cream-2:#f3ebdc;
+  --white:#ffffff;
+  --ink:#2b1d1f;
+  --muted:#6f5f5f;
+  --line:#e6dccb;
+  --radius:12px;
+  --serif:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.wrap-sm{max-width:760px}
+section{padding:44px 0}
+.alt{background:var(--white)}
+
+/* type */
+.eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--wine);line-height:1.15;letter-spacing:-.025em}
+h1{font-size:clamp(32px,8vw,56px)}
+h2{font-size:clamp(26px,5.5vw,38px)}
+h3{font-size:20px}
+.lead{font-size:clamp(16px,2.4vw,19px);color:var(--muted);max-width:620px}
+.head{margin-bottom:28px}
+.head.center{text-align:center}
+.head.center .lead{margin-left:auto;margin-right:auto}
+.center{text-align:center}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:14px 28px;border-radius:999px;font:600 15px/1.2 var(--sans);text-decoration:none;text-align:center;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn-primary{background:var(--wine);color:var(--cream)}
+.btn-primary:hover{background:var(--wine-dark);transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--white)}
+.btn-gold:hover{background:#8f6425;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:rgba(250,245,236,.45)}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(250,245,236,.08)}
+.btn-block{width:100%}
+
+/* icons */
+.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* image placeholder */
+.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:var(--cream-2);border:1px dashed #cbbb9c;border-radius:var(--radius);color:#9a8a6c;font-size:13px;line-height:1.4;width:100%}
+.ph.r-hero{aspect-ratio:4/3}
+.ph.r-card{aspect-ratio:4/5}
+.ph.r-wide{aspect-ratio:1/1}
+.ph.r-chat{aspect-ratio:9/16}
+.ph.r-mini{aspect-ratio:1/1;max-width:96px;font-size:11px;padding:8px}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:100;background:var(--wine-dark);color:var(--cream);font-size:12px}
+.topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 18px;padding-top:10px;padding-bottom:10px;text-align:center}
+.topbar strong{letter-spacing:.1em;color:var(--gold-soft);font-weight:600}
+.topbar .sep{width:1px;height:12px;background:rgba(250,245,236,.3)}
+@media(max-width:560px){.topbar .sep:last-of-type{display:none}}
+.timer{display:inline-flex;gap:6px;font-variant-numeric:tabular-nums}
+.timer span{border:1px solid rgba(250,245,236,.3);border-radius:6px;padding:1px 7px}
+.timer small{font-size:10px;opacity:.7;margin-left:2px}
+
+/* hero */
+.hero{padding:32px 0 44px;text-align:center}
+.hero h1{margin-bottom:20px}
+.hero .lead{margin:0 auto 32px}
+.hero-img{width:86%;max-width:560px;margin-left:auto;margin-right:auto;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:32px}
+.hero-note{margin-top:14px;font-size:13px;color:var(--muted)}
+
+/* grids */
+.grid{display:grid;gap:20px}
+.g-cards{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card .ph{border:0;border-bottom:1px dashed #cbbb9c;border-radius:0}
+.card .cap{padding:14px 12px;text-align:center;font-weight:500;font-size:15px}
+
+.marquee{overflow:hidden;margin:0 -20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:16px;width:max-content;animation:scroll 40s linear infinite}
+.track .card{flex:none;width:200px}
+.track .card:hover{transform:none}
+.track .card img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+@keyframes scroll{to{transform:translateX(calc(-50% - 8px))}}
+@media(min-width:640px){.marquee{margin:0}.track .card{width:240px}}
+/* before after */
+.ba{display:grid;gap:20px;grid-template-columns:1fr 1fr}
+.ba-img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
+.ba figure{display:flex;flex-direction:column;gap:12px}
+.ba figcaption{text-align:center}
+.ba figcaption b{display:block;font-family:var(--serif);font-size:22px;color:var(--wine);font-weight:600}
+.ba figcaption span{font-size:14px;color:var(--muted)}
+.ba-note{margin:32px auto 0;max-width:560px;text-align:center;color:var(--muted)}
+.ba-note b{color:var(--wine)}
+
+/* social */
+.chats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+.slides{display:flex;gap:16px;overflow-x:auto;padding:0 20px 4px;margin:0 -20px;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slides img{flex:none;height:400px;width:auto;border-radius:var(--radius);border:1px solid var(--line);user-select:none}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .25s,width .25s}
+.dots i.on{background:var(--gold);width:22px;border-radius:999px}
+@media(min-width:640px){.slides{margin:0;padding:0}.slides img{height:460px}}
+/* steps */
+.steps{list-style:none;display:flex;flex-direction:column;align-items:center;max-width:380px;margin:0 auto}
+.step{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;padding-bottom:64px}
+.step:last-child{padding-bottom:0}
+.step .badge{width:44px;height:44px;border-radius:50%;background:var(--wine);color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px;margin-bottom:16px;position:relative;z-index:1;border:4px solid var(--white)}
+.step img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:18px}
+.step h3{font-size:20px;margin-bottom:4px}
+.step p{font-size:15px;color:var(--muted)}
+.step:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:8px;width:0;height:48px;border-left:2px dashed var(--gold)}
+.step:not(:last-child)::before{content:"";position:absolute;left:50%;bottom:8px;width:9px;height:9px;margin-left:-4.5px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg) translate(-2px,-2px);z-index:1}
+.js .step{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .step.in{opacity:1;transform:none}
+@media(min-width:900px){
+  .steps{flex-direction:row;align-items:flex-start;max-width:none;gap:24px;position:relative}
+  .steps::before{content:"";position:absolute;top:21px;left:12.5%;right:12.5%;border-top:2px dashed var(--gold)}
+  .step{padding-bottom:0}
+  .step:not(:last-child)::after{left:auto;right:-24px;top:21px;bottom:auto;width:24px;height:0;border-left:0;transform:none}
+  .step:not(:last-child)::before{left:auto;right:-27px;top:17px;bottom:auto;margin:0;transform:rotate(-45deg);border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);border-top:0}
+}
+@media(prefers-reduced-motion:reduce){.js .step{opacity:1;transform:none;transition:none}}
+/* receive */
+.receive{padding-bottom:0}
+.rcard{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--wine);border-radius:16px;padding:32px 20px;text-align:center}
+.pill{display:inline-block;background:var(--cream-2);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:18px}
+.rcard h2{max-width:640px;margin:0 auto 14px}
+.rsub{margin:0 auto 28px;text-align:center}
+.rgrid{display:grid;gap:24px;text-align:left}
+.rgrid img{width:100%;max-width:360px;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);margin:0 auto}
+.rlist{list-style:none;align-self:center}
+.rlist li{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line);font-weight:500;font-size:15px}
+.rlist li:last-child{border-bottom:1px solid var(--line)}
+.rlist .ico{width:26px;height:26px;padding:4px;border-radius:50%;background:var(--wine);color:var(--cream);stroke-width:2}
+@media(min-width:760px){.rcard{padding:48px}.rgrid{grid-template-columns:5fr 6fr;gap:44px}.rgrid img{margin:0}.rlist li{font-size:16px}}
+/* band */
+.band{background:var(--wine);color:var(--cream);text-align:center;padding:48px 0}
+.band h2{color:var(--cream);max-width:720px;margin:0 auto 14px}
+.band p{color:var(--gold-soft);margin-bottom:28px;font-size:15px}
+
+/* math */
+.math{display:flex;flex-direction:column;align-items:center;max-width:440px;margin:0 auto}
+.math-box{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 20px}
+.math-box h3{font-size:20px;margin-bottom:20px;text-align:center}
+.nums{display:grid;gap:0}
+.num{padding:18px 0;text-align:center;border-top:1px solid var(--line)}
+.num:first-child{border-top:0}
+.num small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.num b{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--wine);line-height:1.1}
+.num.hl b{color:var(--gold)}
+.math-box.dark{background:var(--wine-dark);border-color:var(--wine-dark)}
+.math-box.dark h3,.math-box.dark .num b{color:var(--cream)}
+.math-box.dark .num{border-color:rgba(250,245,236,.18)}
+.math-box.dark .num small{color:var(--gold-soft)}
+.math-box.dark .num.hl b{color:var(--gold-soft)}
+.fine{margin-top:24px;text-align:center;font-size:13px;color:var(--muted)}
+
+.tagwrap{display:flex;flex-direction:column;align-items:center}
+.string{width:48px;height:70px;margin-bottom:-21px;stroke:var(--gold);fill:none;stroke-width:2.5;stroke-linecap:round;position:relative;z-index:1}
+.ptag{position:relative;width:100%;transform-origin:50% 0;background:var(--gold-soft);border:1px solid #d8c498;padding:44px 24px 12px;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,22px 100%,0 calc(100% - 22px))}
+.ptag .hole{position:absolute;top:14px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--cream);border:2px solid var(--gold)}
+.ptag h3{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);text-align:center;margin-bottom:12px}
+.ptag .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:16px 0;border-top:1px dashed rgba(90,26,38,.35);font-size:14px;color:var(--wine)}
+.ptag .row b{font-family:var(--serif);font-variant-numeric:lining-nums;font-size:24px;font-weight:700;line-height:1}
+.ptag .row.hl{padding-bottom:30px}
+.ptag .row.hl b{font-size:30px;color:var(--gold)}
+.ptag.dark{background:var(--wine);border-color:var(--wine)}
+.ptag.dark h3,.ptag.dark .row{color:var(--cream)}
+.ptag.dark .row{border-color:rgba(250,245,236,.3)}
+.ptag.dark .row.hl b{color:var(--gold-soft)}
+.ptag.dark .hole{background:var(--cream)}
+.tagwrap{width:100%}
+.string.cord{height:90px;margin-top:-1px;fill:var(--gold)}
+.string.cord path{fill:none}
+/* animação ao entrar na tela */
+.js .math .string{transform-origin:top center;transform:scaleY(0);transition:transform .55s ease-out}
+.js .math .ptag{opacity:0}
+.js .math .row{opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+.js .math.in .t1 .string{transform:none;transition-delay:0s}
+.js .math.in .t2 .string{transform:none;transition-delay:1.1s}
+.js .math.in .t1 .ptag{animation:drop 1.1s .35s cubic-bezier(.3,.7,.4,1) both}
+.js .math.in .t2 .ptag{animation:drop 1.1s 1.6s cubic-bezier(.3,.7,.4,1) both}
+.js .math.in .t1 .row{opacity:1;transform:none}
+.js .math.in .t1 .row:nth-of-type(1){transition-delay:.9s}
+.js .math.in .t1 .row:nth-of-type(2){transition-delay:1.1s}
+.js .math.in .t1 .row:nth-of-type(3){transition-delay:1.3s}
+.js .math.in .t2 .row{opacity:1;transform:none}
+.js .math.in .t2 .row:nth-of-type(1){transition-delay:2.15s}
+.js .math.in .t2 .row:nth-of-type(2){transition-delay:2.35s}
+.js .math.in .t2 .row:nth-of-type(3){transition-delay:2.55s}
+@keyframes drop{0%{opacity:0;transform:translateY(-70px) rotate(-6deg)}50%{opacity:1;transform:translateY(8px) rotate(3.5deg)}70%{transform:translateY(-3px) rotate(-2deg)}85%{transform:rotate(1deg)}100%{opacity:1;transform:none}}
+.ptag .row.hl b{display:inline-block}
+.ptag .row.hl b.pop{animation:pop .6s ease-out}
+@keyframes pop{40%{transform:scale(1.18)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.js .math .string,.js .math .ptag,.js .math .row{opacity:1!important;transform:none!important;animation:none!important}}
+/* audience */
+.aud{display:grid;gap:14px;grid-template-columns:1fr}
+.aud li{list-style:none;display:flex;gap:14px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:18px;font-size:15px}
+.aud .ico{color:var(--gold);width:26px;height:26px}
+
+/* bonus */
+.bonus{display:grid;gap:16px;grid-template-columns:1fr}
+.bonus .b{display:flex;gap:16px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:border-color .25s,transform .25s}
+.bonus .b:hover{border-color:var(--gold);transform:translateY(-2px)}
+.bonus .ph.r-mini{flex:none;width:84px}
+.bonus .n{font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--gold)}
+.bonus h3{font-size:21px;margin:2px 0 4px}
+.bonus p{font-size:14px;color:var(--muted);line-height:1.5}
+
+.bonus .b{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden}
+.bonus .b img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.bbody{padding:16px 18px 20px}
+.bbody p{font-size:15px;color:var(--ink)}
+.bbody .val{margin-top:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.val{display:flex;align-items:baseline;gap:10px;margin-top:8px;flex-wrap:wrap}
+.val s{font-size:13px;color:#9a9090}
+.val strong{font-size:12px;font-weight:700;letter-spacing:.08em;color:#1f7a3d;background:#e6f3ea;border:1px solid #bfe0c9;padding:3px 10px;border-radius:999px}
+/* guarantee */
+.guar{background:var(--white);border:1px solid var(--gold);border-radius:var(--radius);padding:40px 24px;text-align:center;max-width:640px;margin:0 auto}
+.guar img{width:150px;height:auto;margin:0 auto 18px}
+.guar .ico{width:48px;height:48px;color:var(--gold);margin:0 auto 16px;stroke-width:1.25}
+.guar h2{font-size:clamp(28px,5vw,36px);margin-bottom:10px}
+.guar p{color:var(--muted)}
+
+/* plans */
+.plans{display:grid;gap:20px;grid-template-columns:1fr;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:36px 24px 28px}
+.plan.feat{border:2px solid var(--gold)}
+.tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--white);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:999px;white-space:nowrap}
+.plan h3{font-size:24px;margin-bottom:18px;text-align:center}
+.plan ul{list-style:none;display:grid;gap:12px;margin-bottom:28px;flex:1}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.plan li .ico{width:20px;height:20px;color:var(--gold);margin-top:2px}
+.old{text-align:center;color:var(--muted);text-decoration:line-through;font-size:15px}
+.price{text-align:center;font-family:var(--serif);font-size:48px;font-weight:700;letter-spacing:-.03em;color:var(--wine);line-height:1.1}
+.price small{font-size:24px;vertical-align:top;margin-right:4px}
+.once{text-align:center;font-size:13px;color:var(--muted);margin:6px 0 20px}
+
+.plans{max-width:860px;margin-left:auto;margin-right:auto}
+.plabel{display:block;text-align:center;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin-bottom:14px}
+.pdesc{text-align:center;font-size:14px;color:var(--muted);margin:-6px auto 16px;max-width:300px;min-height:42px}
+.bstrip{margin:28px auto 0;max-width:640px;text-align:center;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--wine);background:var(--cream-2);border:1px solid var(--line);border-radius:999px;padding:12px 20px}
+.pimg{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:20px}
+.rec{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.plan li.sep{display:block;height:0;border-top:1px dashed var(--line);margin:2px 0}
+.plan li.bn .ico{color:var(--gold)}
+.plan li.bn b{color:var(--wine);font-weight:600}
+.pulse{animation:pulse 2s ease-in-out infinite}
+.pulse:hover{animation-play-state:paused}
+@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(168,120,47,.45)}60%{transform:scale(1.03);box-shadow:0 0 0 12px rgba(168,120,47,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(168,120,47,0)}}
+.btn-primary.pulse{animation-name:pulse-w}
+@keyframes pulse-w{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(90,26,38,.4)}60%{transform:scale(1.03);box-shadow:0 0 0 12px rgba(90,26,38,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(90,26,38,0)}}
+@media(prefers-reduced-motion:reduce){.pulse{animation:none!important}}
+/* faq */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);transition:border-color .25s}
+.faq details[open],.faq details:hover{border-color:var(--gold)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-weight:500;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:24px;font-weight:300;color:var(--gold);line-height:1;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 20px 20px;color:var(--muted);font-size:15px}
+
+/* closing */
+.closing{background:var(--wine-dark);color:var(--cream);text-align:center;padding:56px 0}
+.closing .eyebrow{color:var(--gold-soft)}
+.closing h2{color:var(--cream);max-width:680px;margin:0 auto 14px}
+.closing .lead{color:var(--gold-soft);margin:0 auto 32px}
+.cta-row{display:flex;flex-direction:column;gap:12px;max-width:420px;margin:0 auto}
+
+footer{background:var(--wine-dark);color:rgba(250,245,236,.6);font-size:13px;text-align:center;padding:28px 0 36px;border-top:1px solid rgba(250,245,236,.12)}
+footer .links{margin-top:6px;display:flex;justify-content:center;gap:18px}
+footer a{text-decoration:none;transition:color .25s}
+footer a:hover{color:var(--cream)}
+
+@media(min-width:640px){
+  .wrap{padding:0 32px}
+  section{padding:64px 0}
+  .g-cards{grid-template-columns:repeat(3,1fr)}
+  .chats{grid-template-columns:repeat(4,1fr)}
+  .aud{grid-template-columns:1fr 1fr}
+  .bonus{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr 1fr;gap:28px}
+  .cta-row{flex-direction:row;max-width:none;justify-content:center}
+  .num{border-top:0;border-left:1px solid var(--line);padding:6px 8px}
+  .num:first-child{border-left:0}
+  .math-box.dark .num{border-color:rgba(250,245,236,.18)}
+  .num b{font-size:34px}
+}
+@media(min-width:960px){
+  .hero{padding:48px 0 64px}
+  .hero-img{width:100%;max-width:560px}
+  .num b{font-size:40px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script>document.documentElement.className+=" js"</script>
+</head>
+<body>
+
+<!-- Ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M14.5 9.2c-.5-.8-1.5-1.2-2.5-1.2-1.4 0-2.5.8-2.5 1.9s1 1.6 2.5 2.1 2.5 1 2.5 2.1-1.1 1.9-2.5 1.9c-1 0-2-.4-2.5-1.2M12 6.5V8m0 8v1.5"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 013 3L8 19z"/><path d="M14.5 6.5l3 3"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M3 9h18v-2.5H3zM12 6.5V20M12 6.5C10 6.5 8 6 8 4.5S10 3 12 6.5zm0 0C14 6.5 16 6 16 4.5S14 3 12 6.5z"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9v11h16V9M4 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0112 7.6 4.2 4.2 0 0119.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></symbol>
+</svg>
+
+<!-- 1. BARRA DE URGÊNCIA -->
+<div class="topbar">
+  <div class="wrap">
+    <strong>OFERTA ESPECIAL DISPONÍVEL APENAS HOJE, <span id="today">26/10/2026</span></strong>
+  </div>
+</div>
+
+<main>
+
+<!-- 2. HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Uma ideia simples para o fim de ano</span>
+    <h1>Transforme velas simples em uma nova fonte de renda neste fim de ano</h1>
+    <p class="lead">Você não precisa fabricar vela, usar máquina de corte nem ter impressora especial. Só personalizar velas prontas com artes que já estão prontas para uso.</p>
+    <img class="hero-img" src="assets/hero.webp" alt="Caixas de velas personalizadas com artes de Natal e religiosas" width="1448" height="1086" fetchpriority="high">
+    <a class="btn btn-primary" href="#planos">Quero ver os planos</a>
+    <p class="hero-note">Acesso imediato · Garantia de 7 dias</p>
+  </div>
+</section>
+
+<!-- 3. MODELOS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Veja o que você pode montar e vender</span>
+      <h2>Dezenas de modelos para você escolher e aplicar</h2>
+    </div>
+    <div class="marquee" aria-label="Modelos de velas personalizadas">
+      <div class="track" id="track">
+        <div class="card"><img src="assets/modelo-1.webp" alt="Kit de velas de Natal" width="1122" height="1402" loading="eager"></div>
+        <div class="card"><img src="assets/modelo-2.webp" alt="Kit de velas religiosas" width="1122" height="1402" loading="eager"></div>
+        <div class="card"><img src="assets/modelo-3.webp" alt="Kit de velas para batizado, aniversário e casamento" width="1122" height="1402" loading="eager"></div>
+        <div class="card"><img src="assets/modelo-4.webp" alt="Kit de velas para primeira comunhão" width="1122" height="1402" loading="lazy"></div>
+        <div class="card"><img src="assets/modelo-5.webp" alt="Kit de velas de Natal em caixa com estrela" width="1122" height="1402" loading="lazy"></div>
+        <div class="card"><img src="assets/modelo-6.webp" alt="Kit de velas de presépio" width="1122" height="1402" loading="lazy"></div>
+        <div class="card"><img src="assets/modelo-7.webp" alt="Kits de velas prontos para presente" width="1122" height="1402" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ANTES E DEPOIS -->
+<section>
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Antes e depois</span>
+      <h2>A mesma vela, outro valor</h2>
+    </div>
+    <div class="ba">
+      <figure>
+        <img class="ba-img" src="assets/antes.webp" alt="Velas brancas simples, sem personalização" width="1122" height="1402" loading="lazy">
+        <figcaption><b>Antes</b><span>Vela comum</span></figcaption>
+      </figure>
+      <figure>
+        <img class="ba-img" src="assets/depois.webp" alt="Velas personalizadas com arte e glitter" width="1122" height="1402" loading="lazy">
+        <figcaption><b>Depois</b><span>Vela personalizada</span></figcaption>
+      </figure>
+    </div>
+    <p class="ba-note">A vela simples custa pouco. A <b>personalização aumenta o valor percebido</b> e é isso que permite cobrar mais por ela.</p>
+  </div>
+</section>
+
+<!-- 4b. PASSO A PASSO -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Passo a passo</span>
+      <h2>É mais simples do que parece</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="badge">1</span>
+        <img src="assets/passo-1.webp" alt="Folhas impressas com artes de Natal e religiosas ao lado de velas brancas" width="1122" height="1402" loading="lazy">
+        <h3>Escolha sua arte</h3>
+        <p>Use um dos mais de 200 modelos.</p>
+      </li>
+      <li class="step">
+        <span class="badge">2</span>
+        <img src="assets/passo-2.webp" alt="Impressora comum imprimindo folhas com artes para velas" width="1122" height="1402" loading="lazy">
+        <h3>Imprima</h3>
+        <p>Em uma impressora comum.</p>
+      </li>
+      <li class="step">
+        <span class="badge">3</span>
+        <img src="assets/passo-3.webp" alt="Mãos aplicando a arte e o glitter em uma vela" width="1122" height="1402" loading="lazy">
+        <h3>Personalize a vela</h3>
+        <p>Aplique seguindo o passo a passo.</p>
+      </li>
+      <li class="step">
+        <span class="badge">4</span>
+        <img src="assets/passo-4.webp" alt="Caixa de velas personalizadas prontas" width="1122" height="1402" loading="lazy">
+        <h3>Finalize</h3>
+        <p>Sua peça está pronta para vender.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. PROVA SOCIAL -->
+<section>
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Quem já está vendendo</span>
+      <h2>Resultados de quem começou com o método</h2>
+    </div>
+    <div class="carousel" aria-label="Depoimentos de clientes">
+      <div class="slides" id="slides">
+        <img src="assets/depoimento-1.webp" width="941" height="1672" alt="Depoimento de cliente no WhatsApp 1" loading="lazy" draggable="false">
+        <img src="assets/depoimento-2.webp" width="941" height="1672" alt="Depoimento de cliente no WhatsApp 2" loading="lazy" draggable="false">
+        <img src="assets/depoimento-3.webp" width="738" height="1600" alt="Depoimento de cliente no WhatsApp 3" loading="lazy" draggable="false">
+        <img src="assets/depoimento-4.webp" width="941" height="1672" alt="Depoimento de cliente no WhatsApp 4" loading="lazy" draggable="false">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAIXA DE DESTAQUE -->
+<div class="band">
+  <div class="wrap">
+    <h2>Vela personalizada vende o ano inteiro. E no fim de ano, vende ainda mais.</h2>
+    <p>Natal, casamentos, batizados, aniversários: sempre tem uma data chegando.</p>
+    <a class="btn btn-gold" href="#planos">Quero começar agora</a>
+  </div>
+</div>
+
+<!-- 7. CONTAS -->
+<section>
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Faça as contas antes de começar</span>
+      <h2>Quanto sobra em cada vela</h2>
+    </div>
+    <div class="math" id="math">
+      <div class="tagwrap t1">
+        <svg class="string nail" viewBox="0 0 48 70" aria-hidden="true"><path d="M10 4c0 14 14 14 14 28M38 4c0 14-14 14-14 28M24 32v38"/></svg>
+        <div class="ptag"><i class="hole"></i><h3>Exemplo: 1 vela</h3><div class="row"><span>Custo por vela</span><b data-v="3">R$ 3</b></div><div class="row"><span>Preço médio de venda</span><b data-v="15">R$ 15</b></div><div class="row hl"><span>Margem por vela</span><b data-v="12">R$ 12</b></div></div>
+      </div>
+      <div class="tagwrap t2">
+        <svg class="string cord" viewBox="0 0 48 90" aria-hidden="true"><circle cx="24" cy="5" r="4"/><path d="M24 9V90"/></svg>
+        <div class="ptag dark"><i class="hole"></i><h3>Exemplo: encomenda de 20</h3><div class="row"><span>Custo total</span><b data-v="60">R$ 60</b></div><div class="row"><span>Valor do pedido</span><b data-v="300">R$ 300</b></div><div class="row hl"><span>Margem total</span><b data-v="240">R$ 240</b></div></div>
+      </div>
+    </div>
+    <p class="fine">Valores ilustrativos. Variam conforme a região e o tipo de vela.</p>
+  </div>
+</section>
+
+<!-- 8. FEITO PARA VOCÊ QUE -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Feito para você que</span>
+      <h2>Este método é para quem quer começar de forma simples</h2>
+    </div>
+    <ul class="aud">
+      <li><svg class="ico"><use href="#i-coin"/></svg>Quer começar gastando pouco</li>
+      <li><svg class="ico"><use href="#i-pencil"/></svg>Não sabe desenhar</li>
+      <li><svg class="ico"><use href="#i-store"/></svg>Já trabalha com personalizados</li>
+      <li><svg class="ico"><use href="#i-gift"/></svg>Quer vender lembrancinhas e presentes</li>
+      <li><svg class="ico"><use href="#i-clock"/></svg>Tem pouco tempo livre</li>
+      <li><svg class="ico"><use href="#i-phone"/></svg>Quer vender pelo WhatsApp e Instagram</li>
+      <li><svg class="ico"><use href="#i-heart"/></svg>Quer uma renda extra com algo que gosta</li>
+      <li><svg class="ico"><use href="#i-box"/></svg>Quer atender encomendas em quantidade</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8b. TUDO QUE VOCÊ RECEBE -->
+<section class="receive">
+  <div class="wrap">
+    <div class="rcard">
+      <span class="pill">Kit digital · +200 artes</span>
+      <h2>Tudo o que você precisa para começar a personalizar suas próprias velas</h2>
+      <p class="lead rsub">Você não precisa criar artes do zero nem aprender a fabricar velas. Receba mais de 200 artes prontas e orientações para transformar velas simples em produtos personalizados.</p>
+      <div class="rgrid">
+        <img src="assets/modelo-5.webp" alt="Caixa de velas personalizadas com artes de Natal" width="1122" height="1402" loading="lazy">
+        <ul class="rlist"><li><svg class="ico"><use href="#i-check"/></svg>Mais de 200 artes prontas para imprimir</li><li><svg class="ico"><use href="#i-check"/></svg>Modelos de Natal, religiosos, casamentos, bebês e datas</li><li><svg class="ico"><use href="#i-check"/></svg>Artes para nomes, datas e mensagens</li><li><svg class="ico"><use href="#i-check"/></svg>Passo a passo de personalização</li><li><svg class="ico"><use href="#i-check"/></svg>Funciona com impressora comum</li><li><svg class="ico"><use href="#i-check"/></svg>Material 100% digital</li><li><svg class="ico"><use href="#i-check"/></svg>Acesso imediato após a compra</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. BÔNUS -->
+<section>
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Bônus do Kit Completo</span>
+      <h2>Além de aprender a personalizar, você também recebe ajuda para começar a vender!</h2>
+      <p class="lead">Porque fazer uma vela bonita é só o primeiro passo. No Kit Completo, você recebe 4 bônus para apresentar seus modelos, valorizar suas criações, montar kits e descobrir oportunidades para suas primeiras encomendas.</p>
+    </div>
+    <div class="bonus">
+      <div class="b">
+        <img src="assets/bonus-1.webp" alt="Bônus 1: Catálogo Vendedor" width="768" height="512" loading="lazy">
+        <div class="bbody"><h3 class="sr">Catálogo Vendedor</h3><p>20 modelos para apresentar aos clientes e facilitar suas primeiras encomendas.</p><div class="val"><s>R$ 29,90</s><strong>GRÁTIS HOJE</strong></div></div>
+      </div>
+      <div class="b">
+        <img src="assets/bonus-2.webp" alt="Bônus 2: Embalagens Encantadoras" width="768" height="512" loading="lazy">
+        <div class="bbody"><h3 class="sr">Embalagens Encantadoras</h3><p>15 ideias para transformar suas velas em presentes mais bonitos e valorizados.</p><div class="val"><s>R$ 19,90</s><strong>GRÁTIS HOJE</strong></div></div>
+      </div>
+      <div class="b">
+        <img src="assets/bonus-3.webp" alt="Bônus 3: Kits Lucrativos" width="768" height="512" loading="lazy">
+        <div class="bbody"><h3 class="sr">Kits Lucrativos</h3><p>12 combinações para montar conjuntos de velas e oferecer pedidos de maior valor.</p><div class="val"><s>R$ 27,90</s><strong>GRÁTIS HOJE</strong></div></div>
+      </div>
+      <div class="b">
+        <img src="assets/bonus-4.webp" alt="Bônus 4: Mapa das Primeiras 10 Vendas" width="768" height="512" loading="lazy">
+        <div class="bbody"><h3 class="sr">Mapa das Primeiras 10 Vendas</h3><p>10 oportunidades para descobrir para quem oferecer suas velas e como começar a divulgar.</p><div class="val"><s>R$ 19,90</s><strong>GRÁTIS HOJE</strong></div></div>
+      </div>
+    </div>
+    <p class="bstrip">Os 4 bônus estão inclusos sem custo adicional no Kit Completo!</p>
+  </div>
+</section>
+
+<!-- 11. PLANOS -->
+<section id="planos">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Escolha o seu kit</span>
+      <h2>Comece com o essencial ou leve a solução mais completa para produzir e vender</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="plabel">Kit Essencial</span>
+        <p class="pdesc">Para começar a personalizar velas com artes prontas.</p>
+        <img class="pimg" src="assets/passo-1.webp" alt="Artes prontas para imprimir e personalizar velas" width="1122" height="1402" loading="lazy">
+        <span class="rec">Você recebe:</span>
+        <ul><li><svg class="ico"><use href="#i-check"/></svg>Mais de 200 artes para velas</li><li><svg class="ico"><use href="#i-check"/></svg>Acesso imediato</li></ul>
+        <div class="old">De R$ 47</div>
+        <div class="price"><small>R$</small>17,90</div>
+        <p class="once">Pagamento único e acesso imediato</p>
+        <!-- TROCAR pelo link de checkout do Hotmart (Kit Essencial) -->
+        <a class="btn btn-primary btn-block pulse" href="https://pay.hotmart.com/LINK-KIT-ESSENCIAL">Quero o Kit Essencial</a>
+      </div>
+      <div class="plan feat">
+        <span class="tag">Mais escolhido</span>
+        <span class="plabel">Kit Completo</span>
+        <p class="pdesc">Para personalizar e receber materiais adicionais que ajudam a apresentar e vender as criações.</p>
+        <img class="pimg" src="assets/hero.webp" alt="Caixas de velas personalizadas prontas para presente" width="1448" height="1086" loading="lazy">
+        <span class="rec">Você recebe:</span>
+        <ul><li><svg class="ico"><use href="#i-check"/></svg>Mais de 200 artes prontas para imprimir</li><li><svg class="ico"><use href="#i-check"/></svg>Modelos de Natal, religiosos, casamentos, bebês e datas</li><li><svg class="ico"><use href="#i-check"/></svg>Artes para nomes, datas e mensagens</li><li><svg class="ico"><use href="#i-check"/></svg>Passo a passo de personalização</li><li><svg class="ico"><use href="#i-check"/></svg>Funciona com impressora comum</li><li><svg class="ico"><use href="#i-check"/></svg>Acesso imediato</li><li class="sep" aria-hidden="true"></li><li class="bn"><svg class="ico"><use href="#i-gift"/></svg><span><b>Bônus 1</b> — Catálogo Vendedor</span></li><li class="bn"><svg class="ico"><use href="#i-gift"/></svg><span><b>Bônus 2</b> — Embalagens Encantadoras</span></li><li class="bn"><svg class="ico"><use href="#i-gift"/></svg><span><b>Bônus 3</b> — Kits Lucrativos</span></li><li class="bn"><svg class="ico"><use href="#i-gift"/></svg><span><b>Bônus 4</b> — Mapa das Primeiras 10 Vendas</span></li><li class="sep" aria-hidden="true"></li><li><svg class="ico"><use href="#i-check"/></svg>Garantia de 7 dias</li></ul>
+        <div class="old">De R$ 97</div>
+        <div class="price"><small>R$</small>27,90</div>
+        <p class="once">Pagamento único e acesso imediato</p>
+        <!-- TROCAR pelo link de checkout do Hotmart (Kit Completo) -->
+        <a class="btn btn-gold btn-block pulse" href="https://pay.hotmart.com/LINK-KIT-COMPLETO">Quero o Kit Completo com desconto de Natal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. GARANTIA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guar">
+      <img src="assets/selo-garantia.png" alt="Selo de garantia de 7 dias" width="300" height="300" loading="lazy">
+      <h2>Sua compra com mais tranquilidade</h2>
+      <p>Você tem 7 dias após a compra para solicitar o reembolso, diretamente pela plataforma de pagamento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FAQ -->
+<section class="alt">
+  <div class="wrap wrap-sm">
+    <div class="head center">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Tire suas dúvidas</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Preciso fabricar a vela?</summary><p>Não. Você compra velas prontas, de qualquer tipo, e aplica a arte sobre elas. Não é preciso saber fazer vela, derreter cera nem ter equipamento de fabricação.</p></details>
+      <details><summary>Preciso de impressora especial ou máquina de corte?</summary><p>Não. Você pode imprimir as artes em uma impressora comum ou levar o arquivo a uma gráfica rápida. Nenhuma máquina de corte é necessária, e o curso mostra como fazer o acabamento com materiais simples.</p></details>
+      <details><summary>Eu sei desenhar? Preciso saber design?</summary><p>Não precisa. As mais de 200 artes já vêm prontas. Você só escolhe a que combina com o cliente e aplica seguindo o passo a passo.</p></details>
+      <details><summary>Consigo personalizar com nomes e datas?</summary><p>Sim. Várias artes foram pensadas para receber nomes, datas e mensagens, o que é ideal para casamentos, batizados, aniversários e lembrancinhas de eventos.</p></details>
+      <details><summary>É só para o Natal?</summary><p>Não. O Natal é a época de maior procura, mas a técnica serve o ano inteiro: Dia das Mães, casamentos, bebês, datas religiosas, aniversários e presentes em geral.</p></details>
+      <details><summary>Quanto tempo leva para fazer uma vela?</summary><p>Depois que você pega o jeito, uma vela leva poucos minutos para ser personalizada. O tempo exato varia com o modelo e com a sua prática, e o treino vem rápido nas primeiras unidades.</p></details>
+      <details><summary>É um produto físico ou digital?</summary><p>É um produto 100% digital. Você recebe as artes e os materiais de apoio para baixar e usar. Nenhum item físico é enviado, então não há frete nem espera.</p></details>
+      <details><summary>Quando recebo o acesso?</summary><p>Logo após a confirmação do pagamento. O acesso chega ao e-mail usado na compra e também fica disponível na área de membros da Hotmart.</p></details>
+      <details><summary>Posso revender as velas que eu produzir?</summary><p>Sim. As velas que você produzir são suas, e você pode vender como quiser, inclusive em encomendas e lembrancinhas. O que não é permitido é revender ou redistribuir os arquivos do curso em si.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 13. ENCERRAMENTO -->
+<section class="closing">
+  <div class="wrap">
+    <span class="eyebrow">Seu próximo passo</span>
+    <h2>Comece este Natal e continue vendendo o ano todo</h2>
+    <p class="lead">Velas simples, artes prontas e um método direto para gerar renda.</p>
+    <div class="cta-row">
+      <!-- TROCAR pelos mesmos links de checkout do Hotmart -->
+      <a class="btn btn-gold pulse" href="https://pay.hotmart.com/LINK-KIT-COMPLETO">Quero o Kit Completo</a>
+      <a class="btn btn-ghost" href="https://pay.hotmart.com/LINK-KIT-ESSENCIAL">Prefiro o Kit Essencial</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year">2026</span> Vela Lucrativa. Todos os direitos reservados.</div>
+    <div class="links"><a href="#politica-de-privacidade">Política de privacidade</a><a href="#termos-de-uso">Termos de uso</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=new Date();
+  document.getElementById("today").textContent=String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0")+"/"+d.getFullYear();
+  ["track"].forEach(function(id){
+    var tr=document.getElementById(id);
+    Array.prototype.slice.call(tr.children).forEach(function(c){var k=c.cloneNode(true);k.setAttribute("aria-hidden","true");tr.appendChild(k)});
+  });
+  var sl=document.getElementById("slides"),pos=0,hold=false,rt,setW=0;
+  function build(){
+    var orig=Array.prototype.slice.call(sl.children).filter(function(c){return !c.hasAttribute("aria-hidden")});
+    var first=orig[0],cl=first.cloneNode(true);cl.setAttribute("aria-hidden","true");sl.appendChild(cl);
+    setW=cl.offsetLeft-first.offsetLeft;sl.removeChild(cl);
+    var copies=Math.ceil(sl.clientWidth*2/Math.max(setW,1))+1;
+    for(var k=0;k<copies;k++)orig.forEach(function(c){var x=c.cloneNode(true);x.setAttribute("aria-hidden","true");sl.appendChild(x)});
+  }
+  if(sl.querySelector("img")&&!sl.querySelector("img").complete){window.addEventListener("load",build)}else{build()}
+  function pause(){hold=true;clearTimeout(rt);rt=setTimeout(function(){pos=sl.scrollLeft;hold=false},2500)}
+  ["touchstart","mousedown","wheel"].forEach(function(e){sl.addEventListener(e,pause,{passive:true})});
+  sl.addEventListener("touchend",pause);
+  var last=0;
+  function step(ts){
+    var dt=last?Math.min(ts-last,100):16;last=ts;
+    if(!hold){
+      pos+=dt*0.04;
+      if(setW&&pos>=setW)pos-=setW;
+      sl.scrollLeft=pos;
+    }
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+  var stepEls=document.querySelectorAll(".step");
+  if("IntersectionObserver" in window){
+    var so=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){var i=Array.prototype.indexOf.call(stepEls,e.target);setTimeout(function(){e.target.classList.add("in")},(window.innerWidth>=900?i*180:0));so.unobserve(e.target)}})},{threshold:.15});
+    stepEls.forEach(function(el){so.observe(el)});
+  }else{stepEls.forEach(function(el){el.classList.add("in")})}
+  var math=document.getElementById("math");
+  function fmt(n){return "R$ "+n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})}
+  function count(el,delay){
+    var to=parseFloat(el.getAttribute("data-v")),t0;
+    el.textContent=fmt(0);
+    setTimeout(function(){
+      function f(ts){t0=t0||ts;var p=Math.min((ts-t0)/1200,1),e=1-Math.pow(1-p,3);el.textContent=fmt(to*e);
+        if(p<1)requestAnimationFrame(f);else if(el.parentNode.classList.contains("hl")){el.classList.add("pop")}}
+      requestAnimationFrame(f);
+    },delay);
+  }
+  function runMath(){
+    math.classList.add("in");
+    Array.prototype.forEach.call(math.querySelectorAll(".row b"),function(b,i){count(b,(i<3?900:2150)+(i%3)*200)});
+  }
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){io.disconnect();runMath()}},{threshold:.2});
+    io.observe(math);
+  }else{math.classList.add("in")}
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
